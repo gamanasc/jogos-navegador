@@ -10,7 +10,10 @@ Repositório para estudar a criação de jogos simples de navegador.
  - [Javascript](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 
 
-## Screenshots
+## Lista de jogos
+- Snake
+
+## Capturas de tela
 
 ![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake.png?raw=true)
 
