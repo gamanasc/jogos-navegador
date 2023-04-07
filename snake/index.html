@@ -9,9 +9,26 @@
     <script src="snake.js"></script>
 </head>
 <body>
-    <header> <h1> Snake </h1></header>
-    
+
     <!-- JOGO -->
-    <canvas id="board"></canvas>
+
+    <div class="d-flex-between">
+        <canvas id="board"></canvas>
+        <div id="sidebar">
+            <h3>SNAKE</h3>
+            <hr>
+            <p><strong>SCORE <br> <span id="score"> 0 </span></strong></p>
+            <hr>
+            <p><strong>HIGH SCORE <br> <span id="high_score"> 0 </span></strong></p>
+            <p id="new_high_score"> NEW HIGH SCORE!</p>
+            <hr>
+            <p id="restart" onClick="window.location.reload();">TRY AGAIN</p>
+            <p id="enter_tip">OR PRESS ENTER TO RESTART</p>
+
+        </div>
+    </div>
+
+    <a href="../index.html">Voltar</a>
+
 </body>
 </html>
