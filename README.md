@@ -14,6 +14,7 @@ Repositório para estudar a criação de jogos simples de navegador.
 - Snake
 
 ## Capturas de tela
-
-![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake.png?raw=true)
+- Snake
+![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake_v2_01.png?raw=true)
+![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake_v2_02.png?raw=true)
 
