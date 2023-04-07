@@ -12,8 +12,8 @@ Repositório para estudar a criação de jogos simples de navegador.
 
 ## Lista de jogos
 
- - [Todos](https://gamanasc.github.io/jogos-navegador/)
- - [Snake](https://gamanasc.github.io/jogos-navegador/snake/)
+ - [Todos](https://gamanasc.github.io/jogos-navegador/){:target="_blank"}
+ - [Snake](https://gamanasc.github.io/jogos-navegador/snake/){:target="_blank"}
 
 
 ## Capturas de tela
