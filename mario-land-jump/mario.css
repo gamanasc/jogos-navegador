@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #59685b;
+    padding: 50px;
+}
+
+.canvas{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #27302a; 
+    border-radius: 5px;
+    background-color: #778a7a;
+}
+
+h1{
+    margin: 20px auto;
+}
+
+.d-flex-between{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar{
+    padding-top: 10px;
+    border: 4px solid #27302a; 
+    border-radius: 5px;
+    margin-left: 11px;
+    width: 200px;
+    height: 450px;
+    background-color: #778a7a;
+}
+
+#new_high_score{
+    display: none;
+}
+
+hr{
+    border: 2px solid #27302a; 
+    margin: 10px 0px;
+}
+
+#game-over{
+    margin: 50px auto;
+    font-size: 26px;
+    display: none;
+}
+
+#restart{
+    display: none;
+}
+
+.clouds{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    right: 0;
+    background: url("./img/clouds.png");
+    animation: cloud-animation 10s linear infinite;
+    z-index: 0;
+}
+
+.ground{
+    position: absolute;
+    bottom: 0;
+    width: 160%;
+    height: 20px;
+    animation: ground-animation infinite 0.5s linear;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 20px;
+    width: 50px;
+    /* right: 330px; */
+    animation: pipe-animation infinite linear;
+    animation-duration: 1.55s;
+    z-index: 1;
+}
+
+.mario{
+    position: absolute;
+    bottom: 20px;
+    width: 40px;
+    left: 30px;
+    z-index: 1;
+}
+
+.jump{
+    animation: jump-animation 0.7s ease-out;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump-animation{
+    0%{
+        bottom: 20px;
+    }
+    40%, 50%, 60%{
+        bottom: 120px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
+
+@keyframes ground-animation{
+    from{
+        right: -40%;
+    }
+    to{
+        right: 0%;
+    }
+}
+
+@keyframes cloud-animation {
+    0% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(-120%, 0);
+    }
+}
+
+a{
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 5px;
+    font-weight: bold;
+    background: #27302a;
+    color: #778a7a !important;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #27302a;
+    box-sizing: border-box;
+}

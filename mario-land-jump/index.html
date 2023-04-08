@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Land Jump</title>
+    <link rel="stylesheet" href="mario.css">
+</head>
+<body>
+    <div class="d-flex-between">
+
+        <div class="canvas">
+
+            <h1><span id="prepare"> 3 </span> </h1>
+
+            <img src="img/pipe.png" class="pipe" alt=""/>
+            <img src="img/mario_v2.gif" class="mario" alt=""/>
+            <img src="img/ground.png" class="ground" alt=""/>
+            <img src="img/clouds.png" class="clouds" alt=""/>
+            
+            <div>
+                <p id="game-over"> GAME OVER </p>
+            </div>
+
+            <span id="restart">Press any button to try again</span>
+
+        </div>
+
+        <div id="sidebar">
+            <h3>Mario Jump</h3>
+            <hr>
+            <p><strong>SCORE <br> <span id="score"> 0 </span></strong></p>
+            <hr>
+            <p><strong>HIGH SCORE <br> <span id="high_score"> 0 </span></strong></p>
+            <p id="new_high_score"> NEW HIGH SCORE!</p>
+
+        </div>
+    </div>
+
+    <a href="../">Voltar</a>
+
+
+    <script src="mario.js"></script>
+
+</body>
+</html>
