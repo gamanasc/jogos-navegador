@@ -24,3 +24,6 @@ Repositório para estudar a criação de jogos simples de navegador.
  - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
  - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
  - [Javascript](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+
+ ## Aviso
+Esse é um repositório para estudos. Todos os direitos dos jogos originais são reservados aos criadores.
