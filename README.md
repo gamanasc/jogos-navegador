@@ -6,6 +6,7 @@ Repositório para estudar a criação de jogos simples de navegador.
 
  - [Todos](https://gamanasc.github.io/jogos-navegador/)
  - [Snake](https://gamanasc.github.io/jogos-navegador/snake/)
+ - [Mario Land Jump](https://gamanasc.github.io/jogos-navegador/mario-land-jump/)
 
 
 ## Capturas de tela
@@ -13,6 +14,10 @@ Repositório para estudar a criação de jogos simples de navegador.
 
 ![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake_v2_01.png?raw=true)
 ![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake_v2_02.png?raw=true)
+
+- Mario Land Jump
+
+![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/mario.png?raw=true)
 
 ## Utilizando
 
