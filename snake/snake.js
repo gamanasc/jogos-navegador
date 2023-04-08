@@ -32,8 +32,8 @@ window.onload = function(){
 
     placeFood();
     document.addEventListener("keyup", changeDirection);
-    setInterval(update, 1000/10); // 100 milisegundos
-
+    speed = 100;
+    mainInterval = setInterval(update, speed); // 100 milisegundos
     let high_score = sessionStorage.getItem("snake_high_score");
  
     if (high_score === null) {
@@ -41,6 +41,13 @@ window.onload = function(){
         document.getElementById("high_score").innerHTML = 0;
     }else{
         document.getElementById("high_score").innerHTML = parseInt(high_score);
+    }
+
+    let snake_speed = sessionStorage.getItem("snake_speed");
+
+    if (snake_speed === null) {
+        sessionStorage.setItem("snake_speed", 1);
+        document.getElementById("snake_speed").innerHTML = 0;
     }
 
 }
@@ -109,12 +116,12 @@ function update(){
 
     if(snakeHeadX == foodX && snakeHeadY == foodY){
 
-        let current_score = parseInt(sessionStorage.getItem("snake_score"));
+        let current_score = sessionStorage.getItem("snake_score");
 
         if (current_score === null) {
-            sessionStorage.setItem("snake_score", parsetInt(1));
+            sessionStorage.setItem("snake_score", 1);
         }else{
-            sessionStorage.setItem("snake_score", parseInt(current_score + 1));
+            sessionStorage.setItem("snake_score", parseInt(current_score) + 1);
         }
 
         let upd_current_score = parseInt(sessionStorage.getItem("snake_score"));
@@ -124,6 +131,25 @@ function update(){
 
         snakeBody.push([foodX, foodY]);
         placeFood();
+
+        // INCREMENTAR VELOCIDADE
+        if(upd_current_score % 5 == 0){
+            let newSpeed = (speed - (upd_current_score));
+            num_speed_level = 0;
+            
+            if(newSpeed >= 5){
+                clearInterval(mainInterval);
+                mainInterval = setInterval(update, newSpeed); 
+                num_speed_level = (100 - newSpeed) / 5;
+            }else{
+                num_speed_level = 20;
+            }
+
+            sessionStorage.setItem("snake_speed", num_speed_level);
+            document.getElementById("snake_speed").innerHTML = num_speed_level;
+
+        }
+
     }
 
     for (let i = snakeBody.length - 1; i > 0; i--) {
