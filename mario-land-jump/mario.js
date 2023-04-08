@@ -103,16 +103,15 @@ setTimeout(function(){
         }else{
 
             // INCREMENTAR SCORE
-            let current_score = parseInt(sessionStorage.getItem("mario_score"));
+            let current_score = sessionStorage.getItem("mario_score");
 
             if (current_score === null) {
-                sessionStorage.setItem("mario_score", parsetInt(1));
+                sessionStorage.setItem("mario_score", 1);
             }else{
-                sessionStorage.setItem("mario_score", parseInt(current_score + 1));
+                sessionStorage.setItem("mario_score", parseInt(current_score) + 1);
             }
 
             let upd_current_score = parseInt(sessionStorage.getItem("mario_score"));
-
 
             document.getElementById("score").innerHTML = upd_current_score;
 
