@@ -1,23 +1,23 @@
 # Jogos de navegador
 
-Repositório para estudar a criação de jogos simples de navegador.
+Repositório para estudar a criação de jogos para o navegador, utilizando Javascript.
 
 ## Lista de jogos
 
  - [Todos](https://gamanasc.github.io/jogos-navegador/)
- - [Snake](https://gamanasc.github.io/jogos-navegador/snake/)
- - [Mario Jump](https://gamanasc.github.io/jogos-navegador/mario-land-jump/)
+ - [Snake](https://gamanasc.github.io/jogos-navegador/games/snake/)
+ - [Mario Jump](https://gamanasc.github.io/jogos-navegador/games/mario-land-jump/)
 
 
 ## Capturas de tela
 - Snake
 
-![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake_v2_01.png?raw=true)
-![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/snake_v2_02.png?raw=true)
+![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/assets/screenshots/snake_v2_01.png?raw=true)
+![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/assets/screenshots/snake_v2_02.png?raw=true)
 
 - Mario Jump
 
-![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/screenshots/mario.png?raw=true)
+![App Screenshot](https://github.com/gamanasc/jogos-navegador/blob/master/assets/screenshots/mario.png?raw=true)
 
 ## Utilizando
 
