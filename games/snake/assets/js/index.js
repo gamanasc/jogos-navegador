@@ -24,6 +24,9 @@ let offset = borderWidth * 2;
 
 let gameOver = false;
 
+let speed;
+let mainInterval;
+
 window.onload = function(){
     board = document.getElementById("board");
     board.height = rows * blockSize;
@@ -135,7 +138,7 @@ function update(){
         // INCREMENTAR VELOCIDADE
         if(upd_current_score % 5 == 0){
             let newSpeed = (speed - (upd_current_score));
-            num_speed_level = 0;
+            let num_speed_level = 0;
             
             if(newSpeed >= 5){
                 clearInterval(mainInterval);
