@@ -22,14 +22,14 @@ const jump = () =>{
     // SÓ ADICIONA A ANIMAÇÃO SE NÃO JÁ FOI ADICIONADA
     if(!mario.classList.contains('jump')){
         mario.classList.add('jump');
-        mario.src = 'img/jump.png';
+        mario.src = 'assets/img/jump.png';
 
         setTimeout(function(){
 
             let mario_game_over = sessionStorage.getItem("mario_game_over");
             console.log(mario_game_over);
             if (mario_game_over === null || mario_game_over != 'true') {
-                mario.src = 'img/mario_v2.gif';
+                mario.src = 'assets/img/mario_v2.gif';
             }
             
             mario.classList.remove('jump');
@@ -71,7 +71,7 @@ setTimeout(function(){
 
             mario.style.animation = 'none';
             mario.style.bottom = marioPosition+'px';
-            mario.src = 'img/game-over.png';
+            mario.src = 'assets/img/game-over.png';
 
             ground.style.animation = 'none';
             ground.style.left = groundPosition+'px';
