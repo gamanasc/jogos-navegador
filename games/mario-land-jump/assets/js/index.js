@@ -2,7 +2,6 @@
 // ==== INSTÂNCIAS DE CLASSES ==
 // =============================
 
-
 const mario = new Mario(); // Mario
 const score = new Score(); // Pontuação
 const prepare = new Prepare(); // Contador inicial para a preparação do jogador
@@ -12,7 +11,6 @@ const game = new Game(); // Funções gerais do jogo
 // =============================
 // ==== CHAMADAS DE FUNÇÕES ====
 // =============================
-
 
 score.startScore(); // Faz preparações de setStorage
 game.prepare(); // Zera o sessionStorage de game over
