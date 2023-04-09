@@ -5,6 +5,10 @@ class Prepare{
 
     /** CONTADOR DESCRESCENTE DE 3 PARA INICIAR O JOGO */
     startCount(){
+        
+        // NÃO MOSTRAR O CANO ATÉ FINALIZAR O CONTADOR
+        scenarioElements.pipe.style.display = 'none';
+
         let contador = setInterval(function(){
             let currentCount = +this.prepare_text.textContent;
             currentCount = currentCount - 1;
@@ -18,7 +22,7 @@ class Prepare{
                 clearInterval(contador);
                 setTimeout(function(){
                     this.prepare_text.style.display = 'none';
-                    pipe.style.display = 'block';
+                    scenarioElements.pipe.style.display = 'block';
                 }.bind(this), 2000);
             }
 

@@ -1,62 +1,22 @@
-const mario = new Mario(); // MARIO
-const score = new Score(); // PONTUAÇÃO
+// =============================
+// ==== INSTÂNCIAS DE CLASSES ==
+// =============================
+
+
+const mario = new Mario(); // Mario
+const score = new Score(); // Pontuação
 const prepare = new Prepare(); // Contador inicial para a preparação do jogador
-score.startScore();
+const scenarioElements = new ScenarioElements(); // Elementos do cenário
+const game = new Game(); // Funções gerais do jogo
 
-const pipe = document.querySelector('.pipe');
-const ground = document.querySelector('.ground');
-const game_over = document.querySelector('#game-over');
-const restart = document.querySelector('#restart');
-
-sessionStorage.setItem("mario_game_over", 'false');
-
-pipe.style.display = 'none';
-
-prepare.startCount();
-
-setTimeout(function(){
-
-    const loop = setInterval(() => {
-        const pipePosition = pipe.offsetLeft;
-        const marioPosition = +window.getComputedStyle(mario.sprite).bottom.replace('px', '');
-        const groundPosition = ground.offsetLeft;
-
-        // GAME OVER
-        if(pipePosition <= 70 && pipePosition > 0 && marioPosition < 45){
-
-            sessionStorage.setItem("mario_game_over", 'true');
-
-            pipe.style.animation = 'none';
-            pipe.style.left = pipePosition+'px';
-
-            mario.sprite.style.animation = 'none';
-            mario.sprite.style.bottom = marioPosition+'px';
-            mario.sprite.src = 'assets/img/game-over.png';
-
-            ground.style.animation = 'none';
-            ground.style.left = groundPosition+'px';
-
-            game_over.style.display = "block";
-            restart.style.display = "block";
-
-            // SALVAR SCORE FINAL
-            score.endScore();
-
-            clearInterval(loop);
-
-            document.addEventListener("keydown", function(event) {
-                location.reload()
-            });
-
-        }else{
-            // INCREMENTAR SCORE
-            score.incrementScore();
-        }
-
-    }, 10);
+// =============================
+// ==== CHAMADAS DE FUNÇÕES ====
+// =============================
 
 
-}, 5000);
+score.startScore(); // Faz preparações de setStorage
+game.prepare(); // Zera o sessionStorage de game over
+prepare.startCount(); // Inicia a contagem de preparação, e impede que o jogo começe até finalizar
+game.start(); // Inicia o jogo
 
-
-document.addEventListener('keydown', e => mario.jump(e, score), true);
+document.addEventListener('keydown', e => mario.jump(e, score), true); // Listener para fazer o Mario pular
