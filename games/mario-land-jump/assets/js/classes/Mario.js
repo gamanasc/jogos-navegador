@@ -8,6 +8,7 @@ class Mario {
      * FUNÇÃO PULAR
      */
     jump(){
+        
         let sprite = this.sprite
 
         // SÓ ADICIONA A ANIMAÇÃO SE NÃO JÁ FOI ADICIONADA

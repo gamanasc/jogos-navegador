@@ -22,10 +22,8 @@ class Score{
         }
 
         // INICIAR SESSION STORAGE "SCORE" CASO NÃO EXISTA
-        if (this.current_score === null) {
-            sessionStorage.setItem("mario_score", 0);
-            this.current_score = 0;
-        }
+        sessionStorage.setItem("mario_score", 0);
+        this.current_score = 0;
     }
 
     /** FINALIZAR O SCORE */ 
@@ -46,6 +44,11 @@ class Score{
         this.current_score = parseInt(this.current_score) + 1;
         sessionStorage.setItem("mario_score", this.current_score);
         this.score_text.innerHTML = parseInt(this.current_score);
+    }
+
+    /** RESETA O SCORE */
+    resetScore(){
+        sessionStorage.setItem("mario_score", 0);
     }
 
 }
