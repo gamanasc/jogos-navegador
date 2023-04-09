@@ -15,7 +15,9 @@ class Mario {
         if(!sprite.classList.contains('jump')){
             sprite.classList.add('jump');
             sprite.src = 'assets/img/jump.png';
-    
+            
+            // APÓS 700MS (tempo da animação), VERIFICA SE DEU GAME OVER
+            // SE NÃO, VOLTA A ANIMAÇÃO DE CAMINHADA, SE DEU, NÃO FAZ NADA PARA MANTER O SPRITE DE GAME OVER ADICIONADO NO MOMENTO DA COLISÃO
             setTimeout(function(){
     
                 let mario_game_over = sessionStorage.getItem("mario_game_over");
